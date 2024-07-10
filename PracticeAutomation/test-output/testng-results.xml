@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-10T16:42:22 IST" name="Default suite" finished-at="2024-07-10T16:42:29 IST" duration-ms="6510">
+    <groups>
+    </groups>
+    <test started-at="2024-07-10T16:42:22 IST" name="Default test" finished-at="2024-07-10T16:42:29 IST" duration-ms="6510">
+      <class name="practiceAutomationTest.PracticeAutomation">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:practiceAutomationTest.PracticeAutomation@6c6c5427]" started-at="2024-07-10T16:42:19 IST" name="launchApplication" finished-at="2024-07-10T16:42:22 IST" duration-ms="3738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="TC002_IncorrectUserName()[pri:0, instance:practiceAutomationTest.PracticeAutomation@6c6c5427]" started-at="2024-07-10T16:42:22 IST" name="TC002_IncorrectUserName" finished-at="2024-07-10T16:42:27 IST" duration-ms="4504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC002_IncorrectUserName -->
+        <test-method signature="TC003_IncorrectPassword()[pri:1, instance:practiceAutomationTest.PracticeAutomation@6c6c5427]" started-at="2024-07-10T16:42:27 IST" name="TC003_IncorrectPassword" finished-at="2024-07-10T16:42:27 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC003_IncorrectPassword -->
+        <test-method signature="TC004_ValidCredentials()[pri:2, instance:practiceAutomationTest.PracticeAutomation@6c6c5427]" started-at="2024-07-10T16:42:27 IST" name="TC004_ValidCredentials" finished-at="2024-07-10T16:42:29 IST" duration-ms="1553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC004_ValidCredentials -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:practiceAutomationTest.PracticeAutomation@6c6c5427]" started-at="2024-07-10T16:42:29 IST" name="afterSuite" finished-at="2024-07-10T16:42:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- practiceAutomationTest.PracticeAutomation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
