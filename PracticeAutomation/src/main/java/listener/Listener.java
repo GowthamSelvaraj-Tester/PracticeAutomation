@@ -30,7 +30,10 @@ public class Listener extends ScreenshotUtility implements ITestListener {
 			String className = result.getTestClass().getName();
 			String testMethodName = result.getMethod().getMethodName();
 			// Get or create an ExtentTest object for the class
-			ExtentTest classTest = classTestMap.computeIfAbsent(className, k -> extent.createTest(className));
+			ExtentTest classTest;
+	        synchronized (classTestMap) {
+	            classTest = classTestMap.computeIfAbsent(className, k -> extent.createTest(className));
+	        }
 			// Create a node for the test method under the class test
 			ExtentTest test = classTest.createNode(testMethodName);
 			extentTest.set(test);// Set the current ExtentTest object to the ThreadLocal variable
