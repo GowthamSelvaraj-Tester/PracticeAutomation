@@ -59,7 +59,6 @@ public class LoginPageModule {
 		try {
 			reuse.movetoElement(element.submitbutton);
 			reuse.click(element.submitbutton);
-			checkMessage();
 			Listener.extentTest.get().log(Status.INFO,"Submit button clicked");
 		} catch(Exception e) {
 			Listener.extentTest.get().log(Status.FAIL,"Exception Occured:" +e.getMessage());
