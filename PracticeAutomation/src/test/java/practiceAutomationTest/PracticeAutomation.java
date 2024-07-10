@@ -8,16 +8,14 @@ import base.Base;
 import listener.Listener;
 import script.LoginPageScript;
 import utility.ConfigReaders;
-
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
-
-import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 @Listeners(Listener.class)
+
+
 public class PracticeAutomation {
   
 	private Base WebDriverUtil;
@@ -42,8 +40,30 @@ public class PracticeAutomation {
 			Listener.extentTest.get().log(Status.FAIL,"Exception occured when executing the Invalid Email TestCase:" + e.getMessage());
 			Assert.fail("Test case failed due to an exception: " + e.getMessage());
 		}
-	
 	}
+	
+	@Test(priority=1)
+	public void TC003_IncorrectPassword() {
+		try {
+			LoginPageScript script = new LoginPageScript(driver);
+			script.TC003_IncorrectPassword();
+		}catch(Exception e) {
+			Listener.extentTest.get().log(Status.FAIL,"Exception occured when executing the Invalid Email TestCase:" + e.getMessage());
+			Assert.fail("Test case failed due to an exception: " + e.getMessage());
+		}
+	}
+	
+	@Test(priority=2)
+	public void TC004_ValidCredentials() {
+		try {
+			LoginPageScript script = new LoginPageScript(driver);
+			script.TC004_ValidCredentials();
+		}catch(Exception e) {
+			Listener.extentTest.get().log(Status.FAIL,"Exception occured when executing the Invalid Email TestCase:" + e.getMessage());
+			Assert.fail("Test case failed due to an exception: " + e.getMessage());
+		}
+	}
+	
   @AfterSuite
   public void afterSuite() {
   }
