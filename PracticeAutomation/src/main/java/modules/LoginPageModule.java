@@ -59,15 +59,22 @@ public class LoginPageModule {
 		try {
 			reuse.movetoElement(element.submitbutton);
 			reuse.click(element.submitbutton);
+			checkMessage();
 			Listener.extentTest.get().log(Status.INFO,"Submit button clicked");
 		} catch(Exception e) {
 			Listener.extentTest.get().log(Status.FAIL,"Exception Occured:" +e.getMessage());
 		}
 	}
-	
+	public void checkMessage() {
+		try {
+			reuse.scrolldrown(driver);
+			Thread.sleep(3600);
+		}catch(Exception e) {
+			Listener.extentTest.get().log(Status.FAIL,"Exception Occured:" +e.getMessage());
+		}
+	}
 	public boolean isErrorMessageDisplayed() {
 		try {
-			String errorMessage = element.errormessage.getText();// Get the error message
 			return element.errormessage.isDisplayed();
 		}
 		catch (Exception e) {
@@ -85,7 +92,8 @@ public class LoginPageModule {
 		}
 	}
 	
-	public void logErrorMessage() {
-		Listener.extentTest.get().log(Status.INFO,"Message Displayed: "+ element.errormessage.getText());
+	public String logErrorMessage() {
+		return element.errormessage.getText();
 	}
+	
 }
